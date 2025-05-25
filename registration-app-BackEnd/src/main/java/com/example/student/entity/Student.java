@@ -5,9 +5,11 @@ import java.time.LocalDateTime;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity
+@Table(name = "student")
 public class Student {
 
   private @Id
@@ -22,7 +24,13 @@ public class Student {
         this.registrationDate = registrationDate;
     }
   
-    // Default constructor
+    public Student() {
+        //TODO Auto-generated constructor stub
+    }
+
+
+
+  // Default constructor
   public Long getId() {
     return this.id;
   }
